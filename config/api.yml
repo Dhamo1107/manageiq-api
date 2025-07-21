@@ -1101,13 +1101,15 @@
     :options:
     - :collection
     - :custom_actions
-    :verbs: *gp
+    :verbs: *gpppd
     :klass: ContainerGroup
     :collection_actions:
       :get:
       - :name: read
         :identifier: container_group_show_list
       :post:
+      - :name: create
+        :identifier: container_group_new
       - :name: check_compliance
         :identifier: container_group_check_compliance
       - :name: query
@@ -1116,9 +1118,17 @@
       :get:
       - :name: read
         :identifier: container_group_show
+      - :name: get_metadata
+        :identifier: container_group_edit
       :post:
+      - :name: edit
+        :identifier: container_group_edit
+      - :name: delete
+        :identifier: container_group_delete
       - :name: check_compliance
         :identifier: container_group_check_compliance
+      - :name: get_metadata
+        :identifier: container_group_edit
   :container_images:
     :description: Container Images
     :identifier: container_image
